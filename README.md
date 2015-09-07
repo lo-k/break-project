@@ -3,9 +3,9 @@
 What is the goal of the project?  
 - The goal of this project is to create a web app that maintains a 'bucket list' of things that a user selects to do in a particular city and ties each activity to a responsive map  
 - Stretch goals include:  
-* Incorporating Google Places API autofill functionality  
-* Figure out a way to calculate 'top trending' list items for the 'Top Trending' section  
-* Make it workable for cities other than Seattle  
+  ** Incorporating Google Places API autofill functionality  
+  ** Figure out a way to calculate 'top trending' list items for the 'Top Trending' section  
+  ** Make it workable for cities other than Seattle  
 
 Who is the target audience (can be just yourself)?  
 - My target audience is myself and Seattleites who want a convenient way to keep track of things to do/see in Seattle  
@@ -25,7 +25,7 @@ What are the tech and/or skill dependencies of your project?
 
 What does success look like for this project? What does done mean?  
 - Success looks like a webpage on which a user can create an account, login, and create/manipulate a 'bucket list' of things to do in Seattle.  
-* They will be able to CRUD things to their list  
-* They will be able to see their list items on an interactive map  
+  ** They will be able to CRUD things to their list  
+  ** They will be able to see their list items on an interactive map  
 
 For task breakdown, see the [Trello board](https://trello.com/b/Kkr0hr2v/citylist)
