@@ -14,7 +14,11 @@
  *= require_self
  */
 
-@import "bootstrap-sprockets";
-@import "bootstrap";
+
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
 
 
