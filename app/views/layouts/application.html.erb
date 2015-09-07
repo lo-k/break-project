@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>BreakProject</title>
+  <title>CityList</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300,600,700|News+Cycle' rel='stylesheet' type='text/css'>
 </head>
-<body>
 
-<%= yield %>
+<div class="container">
+  <body>
 
-</body>
+  <%= yield %>
+
+  </body>
+</div>
 </html>
