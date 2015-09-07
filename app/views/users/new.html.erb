@@ -1,0 +1,24 @@
+<h3>Sign Up!</h3>
+
+<% if @user.errors.any? %>
+  <div>
+    <%= @user.errors.full_messages.first %>
+  </div>
+  <br>
+<% end %>
+
+<%= form_for @user do |f| %>
+
+  <fieldset>
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+
+    <%= f.label :password %>    
+    <%= f.password_field :password %>
+
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+  </fieldset>
+
+  <%= f.submit "Create Account" %>
+<% end %>
