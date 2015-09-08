@@ -11,6 +11,8 @@ RSpec.describe SessionsController, type: :controller do
     # end
 
     it "redirects to the user's dashboard" do
+      sarah
+            
       get :create, {session: {email: "sarah@email.com", password: "hello"}}
       expect(response).to redirect_to dashboard_path
     end
