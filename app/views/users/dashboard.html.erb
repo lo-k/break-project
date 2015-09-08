@@ -1,1 +1,9 @@
-<h1>Hello <%= @user.name %>!</h1>
+<header>
+  <nav>
+    <h1><span class="your-name"><%= @user.name %></span>'s <span class= "city-name">City</span><span class="list-title">Lists</span></h1>
+    <ul>
+      <li><%= link_to "LOG OUT", logout_path, method: :delete %></li>
+    </ul>
+  </nav>
+  <div class="clear"></div>
+</header>
