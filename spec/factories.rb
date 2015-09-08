@@ -7,4 +7,9 @@ FactoryGirl.define do
     password_confirmation 'hello'
   end
 
+  factory :city_list do
+    city 'Seattle'
+    user_id '1'
+  end
+
 end

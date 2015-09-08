@@ -18,6 +18,10 @@ class CityListsController < ApplicationController
   end
 
   def destroy
+    @city_list = CityList.find(params[:id])
+    @city_list.destroy
+
+    redirect_to dashboard_path 
   end
 
   def show
