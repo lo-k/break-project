@@ -6,7 +6,13 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   resources :users
-  resources :sessions, :only => [:new, :create, :destroy]
+
+  get '/dashboard' => 'users#dashboard', as: 'dashboard'
+
+  get '/login'  =>  'sessions#new', as: 'login'
+  post '/login' =>  'sessions#create'
+  delete '/logout' => 'sessions#destroy', as: 'logout'
+
   resources :city_lists do
     resources :list_items
   end
