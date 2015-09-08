@@ -27,4 +27,17 @@ RSpec.describe CityListsController, type: :controller do
     # end
   end
 
+  describe "GET #show" do
+    let(:sarah) { create :user }
+    let(:seattle) { create :city_list }
+
+    it "renders the show template" do
+      session[:user_id] = sarah.id
+      get :show, id: seattle.id
+
+      expect(response).to render_template 'show'
+    end
+
+  end
+
 end

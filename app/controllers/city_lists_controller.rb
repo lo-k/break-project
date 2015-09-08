@@ -6,8 +6,8 @@ class CityListsController < ApplicationController
   def create
     @city_list = CityList.new(city_list_params)
     
-    @current_user = User.find(session[:user_id])
-    @city_list.user_id = @current_user.id
+    @user = User.find(session[:user_id])
+    @city_list.user_id = @user.id
     
     if @city_list.save
       redirect_to dashboard_path
@@ -25,6 +25,8 @@ class CityListsController < ApplicationController
   end
 
   def show
+    @user = User.find(session[:user_id])
+    @city_list = CityList.find(params[:id])
   end
 
   def update
