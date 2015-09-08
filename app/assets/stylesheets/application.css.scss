@@ -14,6 +14,68 @@
  *= require_self
  */
 
+/******************************************
+/* SETUP                   
+/*******************************************/
+
+/* Box Model */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+.alignright {
+  float: right; 
+  padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+  float: left; 
+  padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+.hide {
+     display: none;
+}
+
+/******************************************
+/* BASE STYLES                   
+/*******************************************/
+
+body {
+     margin: 0;     
+     font-size: 12px;
+     line-height: 1.4;
+     font-family: Helvetica, Arial, sans-serif;
+}
+
+/******************************************
+/* BASE FORM STYLES                 
+/*******************************************/
+
+/***** TEXT COLORS
+
+white background #FFFFFF
+fire engine red #D01A2B
+tuatara #444444          (drk grey)
+iron #CCCCCC             (grey borders)
+loblolly #B8B8B8         (lgt grey)
+white lilac #E9E9E9      (super lgt grey (search field and background))
+
+*****/
 
 .container {
   width: 100%;
@@ -21,4 +83,52 @@
   padding: 0;
 }
 
+/******************************************
+/* Header/Nav Bar               
+/*******************************************/
+
+header {
+     padding-left: 10px;
+     padding-bottom: 15px;
+     background-color: #FFFFFF;
+     border: 2px solid #CCCCCC;
+     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+     width: 100%;
+     position: fixed;
+     z-index: 1000;
+}
+
+h1 {
+     display: inline;
+     font-family: 'News Cycle', sans-serif;
+     font-size: 3em;
+     color: #B8B8B8;
+     font-weight: 400;
+}
+
+.city-name {
+     color: #D01A2B;
+     font-size: 1.5em;
+}
+
+nav ul {
+     float: right;
+     padding-top: 29px;
+}
+
+nav li {
+     display: inline;
+}
+
+header ul li a {
+     text-decoration: none;
+     padding-right: 20px;
+     color: #444444; /*dark grey font*/
+     font-family: 'News Cycle', sans-serif;
+     font-size: 1.25em;
+}
+
+header ul li a:hover {
+     color: #D01A2B; /*red font*/
+}
 

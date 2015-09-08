@@ -3,22 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 /******************************************
-/* SETUP                   
-/*******************************************/
-
-/* Box Model */
-* {
-     box-sizing: border-box;
-}
-
-.hide {
-  display: none;
-}
-
-/******************************************
 /*  MAIN STYLES                   
 /*******************************************/
-
 
 iframe {
   float: left;
@@ -28,7 +14,7 @@ header {
   width: 100%;
 }
 
-h1 {
+.home-logo {
     font-family: 'News Cycle', sans-serif;
     font-size: 8em;
     color: #444444;
@@ -75,7 +61,7 @@ h1 {
 /* Login Modal                  
 /*******************************************/
 
-h3 {
+.login-box h3 {
   font-family: 'News Cycle', sans-serif;
     font-size: 2.3em;
     color: #444444;
@@ -85,7 +71,7 @@ h3 {
     padding-bottom: 10px;
 }
 
-h4 {
+.login-box label {
   font-family: 'News Cycle', sans-serif;
     font-size: 1em;
     color: #444444;
@@ -114,8 +100,8 @@ h4 {
   right:0;
 }
 
-input[type="text"],
-input[type="password"] {
+.login-box input[type="text"],
+.login-box input[type="password"] {
    font-family: 'Open Sans', sans-serif;     
    font-weight: 400;
    color: #444444;
