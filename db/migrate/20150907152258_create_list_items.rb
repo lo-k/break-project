@@ -5,6 +5,7 @@ class CreateListItems < ActiveRecord::Migration
       t.string :address
       t.boolean :complete
       t.boolean :favorite
+      t.integer :city_list_id
 
       t.timestamps null: false
     end
