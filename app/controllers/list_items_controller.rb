@@ -24,8 +24,24 @@ class ListItemsController < ApplicationController
     redirect_to city_list_path(@list_item.city_list_id)
   end
 
-  def update
+  def toggle_favorite
+    @list_item = ListItem.find(params[:id])
+
+    @list_item.favorite = @list_item.favorite ? false : true
+    @list_item.save
+
+    redirect_to city_list_path(@list_item.city_list_id)
   end
+
+  def toggle_complete
+    @list_item = ListItem.find(params[:id])
+
+    @list_item.complete = @list_item.complete ? false : true
+    @list_item.save
+
+    redirect_to city_list_path(@list_item.city_list_id)
+  end
+
 #####################################################################
   private
 

@@ -13,6 +13,9 @@ Rails.application.routes.draw do
   post '/login' =>  'sessions#create'
   delete '/logout' => 'sessions#destroy', as: 'logout'
 
+  post '/favorite/:id' => 'list_items#toggle_favorite', as: 'toggle_favorite_item'
+  post '/complete/:id' => 'list_items#toggle_complete', as: 'toggle_complete_item'
+
   resources :city_lists do
     resources :list_items
   end
