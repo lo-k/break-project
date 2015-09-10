@@ -1,5 +1,10 @@
 // Dashboard
 
+.city-list-body {
+  padding-top: 110px;
+  background-color: blue;
+}
+
 .city-list {
   border: .8px solid #444444;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
@@ -8,8 +13,16 @@
   margin: 13px;
   float:left;
   display: inline;
+  text-align: center;
 }
 
-.city-list-body {
-  padding-top: 110px;
+.city-list a {
+  text-decoration: none;
 }
+
+.city-list h2 {
+  margin-top: 80px;
+  font-size: 4em;
+  color: #000;
+}
+
