@@ -12,4 +12,12 @@ FactoryGirl.define do
     user_id '1'
   end
 
+  factory :list_item do
+    title 'See the Fremont Troll'
+    address '123 Troll St.'
+    complete false
+    favorite false
+    city_list_id 1
+  end
+
 end
