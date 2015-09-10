@@ -20,6 +20,7 @@ class UsersController < ApplicationController
   def dashboard
     if session[:user_id]
       @user = User.find(session[:user_id])
+      @city_lists = @user.city_lists
     else
       flash[:error] = "Please login to view your CityLists"
       redirect_to root_path
