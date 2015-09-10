@@ -5,11 +5,21 @@ RSpec.describe ListItemsController, type: :controller do
   describe "POST #create" do
     let(:seattle) { create :city_list }
 
-    it "creates a new list_item" do
-      get :create, {list_item: {title: "See the Fremont Troll", address: "123 Troll Street", complete: false, favorite: false}, city_list_id: seattle.id }
+    context "valid params" do
+      it "creates a new list_item" do
+        get :create, {city_list_id: seattle.id, list_item: {title: "See the Fremont Troll", address: "123 Troll Street", complete: false, favorite: false}}
 
-      expect(CityList.count).to eq 1
+        expect(CityList.count).to eq 1
+      end
     end
+
+    # context "invalid params" do
+    #   it "does not create a new list_item" do
+    #     get :create, {city_list_id: seattle.id, list_item: {address: "123 Troll Street", complete: false, favorite: false}, city_list_id: seattle.id }
+
+    #     expect(CityList.count).to eq 0
+    #   end
+    # end
   end
 
   describe "DELETE #destroy" do
