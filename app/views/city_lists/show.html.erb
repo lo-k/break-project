@@ -2,8 +2,11 @@
   <nav>
     <h1><span class="your-name"><%= @user.name %></span>'s <span class= "city-name"><%= @city_list.city %></span><span class="list-title">List</span></h1>
     <ul>
-      <li>MY LIST(<%= @completed %>% completed)</li>
-      <li>FAVS(<%= @favs_count %>)</li>
+      <li>LIST (<%= @completed %>% completed)</li>
+      <li>FAVS (<%= @favs_count %>)</li>
+      <li>|</li>
+      <li><%= link_to dashboard_path do %>ALL <span class="city-name">City</span>Lists <% end %></li>
+      <li>|</li>
       <li><%= link_to "LOG OUT", logout_path, method: :delete %></li>
     </ul>
   </nav>
