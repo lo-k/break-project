@@ -2,6 +2,8 @@
   <nav>
     <h1><span class="your-name"><%= @user.name %></span>'s <span class= "city-name"><%= @city_list.city %></span><span class="list-title">List</span></h1>
     <ul>
+      <li>MY LIST(<%= @completed %>% completed)</li>
+      <li>FAVS(<%= @favs_count %>)</li>
       <li><%= link_to "LOG OUT", logout_path, method: :delete %></li>
     </ul>
   </nav>
@@ -13,10 +15,40 @@
 <div class="bucket-list">
   <ul id="list-items">
     <% @list_items.each do |list_item| %>
-      <li><i class="heart fa fa-heart-o"></i><i class="checkbox fa fa-square-o"></i> <%= list_item.title %> <i class="fa fa-times opaque"></i></li>
+      <li>
+        <!-- FAVORITE -->
+        <%= link_to toggle_favorite_item_path(list_item.id), method: :post do %>
+          <% if list_item.favorite %>
+            <i class="heart fa fa-heart"></i>
+          <% else %>
+            <i class="heart fa fa-heart-o"></i>
+          <% end %>
+        <% end %>
+
+        <!-- COMPLETE -->
+        <%= link_to toggle_complete_item_path(list_item.id), method: :post do %>
+          <% if list_item.complete %>
+            <i class="checkbox fa fa-check-square-o"></i>
+          <% else %>
+            <i class="checkbox fa fa-square-o"></i>
+          <% end %>
+        <% end %>
+
+        <!-- TITLE -->
+        <%= list_item.title %> 
+
+        <!-- DELETE -->
+        <%= link_to city_list_list_item_path(@city_list.id, list_item.id), method: :delete do %>
+          <i class="fa fa-times opaque"></i>
+        <% end %>
+      </li>
     <% end %>
   </ul>
-  <form>
-    <input type="text" placeholder="Enter your next item here..." name="new_item" id="new_item" size="32"> <i class="save-button fa fa-chevron-circle-right"></i>
-  </form>
+
+  <%= form_for @new_list_item, url: city_list_list_items_path(@city_list.id), method: :post do |f| %>
+    <%= f.text_field :title, value: "New Item..." %>
+    <%= f.submit 'Add' %>
+  <% end %>
+
 </div>
+
