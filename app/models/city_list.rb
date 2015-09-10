@@ -12,7 +12,11 @@ class CityList < ActiveRecord::Base
     total = list_items.count
     complete = list_items.where(complete: true).count
 
-    percent = ((complete.to_f / total.to_f) * 100).to_i
+    if total > 0
+      percent = ((complete.to_f / total.to_f) * 100).to_i
+    else
+      percent = 0
+    end
 
     return percent
   end
