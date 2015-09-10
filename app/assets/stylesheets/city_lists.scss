@@ -29,43 +29,32 @@
   list-style: none;
 }
 
-.completed {
-     color: #B8B8B8;
-     font-style: italic;
-}
-
-.fa {
-     padding-right: 10px;
-}
-
-.email {
-     display: none;
-}
-
-input[type="text"] {
-     font-family: 'Open Sans', sans-serif;     
-     font-weight: 400;
-     color: #444444;
-     font-size: 1em;
-     margin-left: 40px;
-     margin-bottom: 20px;
-}
-
-.save-button {
-     display: inline-block;
-     border-radius: 28px;
-     line-height: .9em;  
-     background: #B8B8B8;
-     padding: 1px 2px 1px 2px;
-     margin: auto;
-     text-decoration: none;
-}
-
-.save-button:hover {
-  background: #D01A2B;
+#list-items a {
   text-decoration: none;
 }
 
+.completed {
+  color: #B8B8B8;
+  font-style: italic;
+}
+
+.fa {
+  padding-right: 10px;
+}
+
+.email {
+  display: none;
+}
+
+input[type="text"] {
+  font-family: 'Open Sans', sans-serif;     
+  font-weight: 400;
+  color: #444444;
+  font-size: 1em;
+  margin-left: 40px;
+  margin-bottom: 20px;
+}
+
 .opaque {
-     opacity: 0.2;
+  opacity: 0.2;
 }
