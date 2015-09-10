@@ -7,3 +7,23 @@
   </nav>
   <div class="clear"></div>
 </header>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="bucket-list">
+  <ul id="list-items">
+    <% @list_items.each do |list_item| %>
+      <li><i class="heart fa fa-heart-o"></i><i class="checkbox fa fa-square-o"></i> <%= list_item.title %> <i class="fa fa-times opaque"></i></li>
+    <% end %>
+  </ul>
+  <form>
+    <input type="text" placeholder="Enter your next item here..." name="new_item" id="new_item" size="32"> <i class="save-button fa fa-chevron-circle-right"></i>
+  </form>
+</div>
