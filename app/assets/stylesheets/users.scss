@@ -1,3 +1,11 @@
-// Place all the styles related to the users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// Dashboard
+
+.city-list {
+  border: .8px solid #444444;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+  height: 250px;
+  width: 20%;
+  margin: 13px;
+  float:left;
+  display: inline;
+}
