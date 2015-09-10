@@ -1,7 +1,7 @@
 class ListItemsController < ApplicationController
 
-  def new
-  end
+  # def new
+  # end
 
   def create
     @list_item = ListItem.new(list_item_params)

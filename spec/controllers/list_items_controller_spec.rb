@@ -37,4 +37,40 @@ RSpec.describe ListItemsController, type: :controller do
     # end
   end
 
+  describe "POST #toggle_favorite" do
+    let(:seattle) { create :city_list }
+    let(:fremont) { create :list_item }
+
+    it "sets list_item.favorite == true if it's currently false" do
+      post :toggle_favorite, id: fremont.id
+
+      expect(fremont.favorite).to eq false
+    end
+
+    it "sets list_item.favorite == false if it's currently true" do
+      fremont.favorite = true
+      post :toggle_favorite, id: fremont.id
+
+      expect(fremont.favorite).to eq true
+    end
+  end
+
+  describe "POST #toggle_complete" do
+    let(:seattle) { create :city_list }
+    let(:fremont) { create :list_item }
+
+    it "sets list_item.complete == true if it's currently false" do
+      post :toggle_complete, id: fremont.id
+
+      expect(fremont.complete).to eq false
+    end
+
+    it "sets list_item.complete == false if it's currently true" do
+      fremont.complete = true
+      post :toggle_complete, id: fremont.id
+
+      expect(fremont.complete).to eq true
+    end
+  end
+
 end
