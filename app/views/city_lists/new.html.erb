@@ -1,0 +1,18 @@
+<h3>Create a new CityList</h3>
+
+<% if @city_list.errors.any? %>
+  <div>
+    <%= @city_list.errors.full_messages.first %>
+  </div>
+  <br>
+<% end %>
+
+<%= form_for @city_list do |f| %>
+
+  <fieldset>
+    <%= f.label :city %>
+    <%= f.text_field :city %>
+  </fieldset>
+
+  <%= f.submit "Create CityList" %>
+<% end %>
