@@ -132,3 +132,48 @@ header ul li a:hover {
      color: #D01A2B; /*red font*/
 }
 
+/******************************************
+/* Scroll to Top         
+/*******************************************/
+
+.scroll-to-top {
+     position: fixed;
+     right: 0;
+     bottom: 0;
+     width: 55px;
+     height: 77px;
+     font-size: 1.5em;
+     font-weight: 400;
+     opacity: 0.3;
+     text-align: center;
+     padding: 10px;
+     margin: 15px;
+     background-color: whiteSmoke;
+     display: none;
+     z-index: 1;
+}
+
+.scroll-to-top a {
+     text-decoration: none;
+     color: black;
+     height: 100%;
+     width: 100%;
+     display: block;
+}
+
+/******************************************
+/* Footer        
+/*******************************************/
+
+footer {
+     background-color: #FFFFFF;     
+     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+     font-family: 'News Cycle', sans-serif;
+     color: #444444;
+     font-size: 1.2em;
+}
+
+.wrapper {
+   padding: 20px;  
+}
+

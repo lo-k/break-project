@@ -1,3 +1,65 @@
-// Place all the styles related to the city_lists controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// SHOW PAGE
+
+.bucket-list {
+     position: absolute;
+     top:130px;
+     left:60px;  
+     width: 30%;
+     border: .8px solid #444444;
+     border-radius: 6px;
+     background-color: #FFFFFF;
+     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+
+}
+
+.bucket-list ul li {
+     font-family: 'Open Sans', sans-serif;
+     font-weight: 400;
+     color: #444444;
+     font-size: 1.25em;
+     padding-top: 5px;
+     padding-bottom: 5px;
+     list-style: none;
+}
+
+.completed {
+     color: #B8B8B8;
+     font-style: italic;
+}
+
+.fa {
+     padding-right: 10px;
+}
+
+.email {
+     display: none;
+}
+
+input[type="text"] {
+     font-family: 'Open Sans', sans-serif;     
+     font-weight: 400;
+     color: #444444;
+     font-size: 1em;
+     margin-left: 40px;
+     margin-bottom: 20px;
+}
+
+.save-button {
+     display: inline-block;
+     border-radius: 28px;
+     line-height: .9em;  
+     background: #B8B8B8;
+     padding: 1px 2px 1px 2px;
+     margin: auto;
+     text-decoration: none;
+}
+
+.save-button:hover {
+  background: #D01A2B;
+  text-decoration: none;
+}
+
+.opaque {
+     opacity: 0.2;
+}
