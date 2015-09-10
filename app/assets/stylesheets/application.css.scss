@@ -59,7 +59,7 @@ body {
      margin: 0;     
      font-size: 12px;
      line-height: 1.4;
-     font-family: Helvetica, Arial, sans-serif;
+     font-family: 'Open Sans', sans-serif;
 }
 
 /******************************************
@@ -104,6 +104,10 @@ h1 {
      font-size: 3em;
      color: #B8B8B8;
      font-weight: 400;
+}
+
+h2 {
+    font-weight: 200;
 }
 
 .city-name {
