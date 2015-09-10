@@ -28,7 +28,12 @@ class CityListsController < ApplicationController
   def show
     @user = User.find(session[:user_id])
     @city_list = CityList.find(params[:id])
+    @completed = @city_list.percent_completed
+    @favs_count = @city_list.count_favs
+    
     @list_items = @city_list.list_items
+
+    @new_list_item = ListItem.new
   end
 
   def update
