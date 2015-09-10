@@ -2,6 +2,17 @@ require 'rails_helper'
 
 RSpec.describe CityListsController, type: :controller do
 
+  describe "GET #new" do
+    let(:sarah) { create :user }
+
+    it "renders the 'new' template" do
+      session[:user_id] = sarah.id
+      get :new
+
+      expect(response).to render_template 'new'
+    end
+  end
+
   describe "POST #create" do
     let(:sarah) { create :user }
 
