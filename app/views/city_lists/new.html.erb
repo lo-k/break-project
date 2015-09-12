@@ -1,4 +1,4 @@
-<h3>Create a new CityList</h3>
+<h1>Create a new <span class="city-name">City</span>List</h1>
 
 <% if @city_list.errors.any? %>
   <div>
@@ -7,12 +7,18 @@
   <br>
 <% end %>
 
-<%= form_for @city_list do |f| %>
+<div class="row">
+  <div class="col-md-5">
+    <%= form_for @city_list do |f| %>
 
-  <fieldset>
-    <%= f.label :city %>
-    <%= f.text_field :city %>
-  </fieldset>
+      <fieldset>
+        <div class="form-group">
+          <%= f.label :city %>
+          <%= f.text_field :city, placeholder: "Enter a City here...", class: "form-control" %>
+        </div>
+      </fieldset>
 
-  <%= f.submit "Create CityList" %>
-<% end %>
+      <%= f.submit "Create", class: "btn btn-default"  %>
+    <% end %>
+  </div>
+</div>
