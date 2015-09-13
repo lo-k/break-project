@@ -13,7 +13,11 @@
   <div class="clear"></div>
 </header>
 
-<div class="map-background"></div>
+<a name="top-of-page"></a>
+
+<div class="map-container">
+  <div id="map-init" class="map"></div>
+</div>
 
 <div class="bucket-list">
   <ul id="list-items">
@@ -48,8 +52,14 @@
     <% end %>
   </ul>
 
+  <h2 class="new-list-item-title">NEW LIST ITEM:</h2>
   <%= form_for @new_list_item, url: city_list_list_items_path(@city_list.id), method: :post do |f| %>
-    <%= f.text_field :title, placeholder: "New Item..." %>
+    <div>
+      <%= f.text_field :title, placeholder: "Description" %>
+    </div>
+    <div>
+      <%= f.text_field :address, placeholder: "Address (optional)" %>
+    </div>
     <%= f.submit 'Add' %>
   <% end %>
 
