@@ -13,11 +13,14 @@
   
   <!-- Font icons -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">    
+
+  <!-- MapBox Stylesheet -->
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.0/mapbox.css' rel='stylesheet' />
 </head>
 
 <div class="container-fluid">
   <body>
-    <a name="top-of-page"></a>
+    <!-- <a name="top-of-page"></a> -->
 
     <%= yield %>
 
@@ -31,5 +34,8 @@
       </footer>
     <% end %>
   </body>
+
+  <!-- MapBox Script -->
+  <script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.0/mapbox.js'></script>
 </div>
 </html>
