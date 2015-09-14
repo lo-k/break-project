@@ -19,25 +19,19 @@ header {
     font-size: 8em;
     color: #444444;
     font-weight: 400;
-    // position: relative;
     margin: 0px auto;
     padding-bottom: 20px;
+}
 
+.home-logo-accent {
+  color: #D01A2B;
 }
 
 .logo-box {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 196px;
-  width: 370px;
-  margin: auto;
-  margin-top: 200px;
-  bottom: 0;
-  right: 0;
+  margin: 0 auto;
+  margin-top: 150px;
   text-align: center;
 }
-
 
 .open-login-button {
   -webkit-border-radius: 28;
@@ -109,7 +103,6 @@ header {
    font-weight: 400;
    color: #444444;
    font-size: .8em;
-   // margin-bottom: 10px;
 }
 
 
