@@ -8,17 +8,19 @@
   <div class="clear"></div>
 </header>
 
+<%= image_tag("world_map.gif", class: "map-background-image") %>
+
 <div class="city-list-body">
   <% @city_lists.each do |city_list| %>
-    <%= link_to city_list_path(city_list.id) do %>
       <div class="city-list">
-        <h2><%= city_list.city %></h2>
-        <%= link_to "X", city_list_path(city_list.id), method: :delete %>
+        <%= link_to "X", city_list_path(city_list.id), method: :delete, class: "pull-right city-list-delete-button btn btn-danger" %>
+        <%= link_to city_list_path(city_list.id) do %>
+          <h2><%= city_list.city %></h2>
+        <% end %>
       </div>
-    <% end %>
   <% end %>
     <%= link_to new_city_list_path do %>
-      <div class="city-list"><h2>+</h2></div>
+      <div class="city-list"><h2 class="btn">+</h2></div>
     <% end %>
 </div>
 
