@@ -6,9 +6,13 @@ $(function() {
   // removes "display: none" from modal box; opens modal with user name and password
 
   $('.open-login-button').on('click', function() {
-    $(this).addClass('hide');
+    // $(this).addClass('hide');
     $('.modalcontainer').removeClass('hide');
   });
+
+  $('.close-modal-button').on('click', function() {
+    $('.modalcontainer').addClass('hide');
+  })
 
   // loading icon
 
