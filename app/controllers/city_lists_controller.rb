@@ -2,6 +2,7 @@ class CityListsController < ApplicationController
 
   def new
     @city_list = CityList.new
+    @user = User.find(session[:user_id])
   end
 
   def create
