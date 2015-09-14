@@ -15,9 +15,9 @@
 
 <a name="top-of-page"></a>
 
-<div class="map-container">
+<!-- <div class="map-container">
   <div id="map-init" class="map"></div>
-</div>
+</div> -->
 
 <div class="bucket-list">
   <ul id="list-items">
@@ -33,16 +33,17 @@
         <% end %>
 
         <!-- COMPLETE -->
-        <%= link_to toggle_complete_item_path(list_item.id), method: :post do %>
-          <% if list_item.complete %>
+        <% if list_item.complete %>
+          <%= link_to toggle_complete_item_path(list_item.id), method: :post do %>
             <i class="checkbox fa fa-check-square-o"></i>
-          <% else %>
+          <% end %>
+            <span class="completed"><%= list_item.title %></span> 
+        <% else %>
+          <%= link_to toggle_complete_item_path(list_item.id), method: :post do %>
             <i class="checkbox fa fa-square-o"></i>
           <% end %>
+            <span><%= list_item.title %></span>
         <% end %>
-
-        <!-- TITLE -->
-        <%= list_item.title %> 
 
         <!-- DELETE -->
         <%= link_to city_list_list_item_path(@city_list.id, list_item.id), method: :delete do %>
