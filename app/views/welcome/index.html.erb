@@ -1,16 +1,17 @@
-<!-- <div class="loading-screen">
-  <div class= "spinner"></div>
-</div> -->
+
 <!-- <iframe width='100%' height='700px' frameBorder='0' src='https://a.tiles.mapbox.com/v4/lo-k.lb5nai9c/attribution,zoompan,geocoder,share.html?access_token=pk.eyJ1IjoibG8tayIsImEiOiI2MlRSblJNIn0.BHAPbjvKJOJErIpztHN2Lw'></iframe> -->
+
+<%= image_tag("world_map.gif", class: "map-background-image") %>
+
 <div class="logo-box">
-  <h1 class="home-logo">CityList</h1>
+  <h1 class="home-logo"><span class="home-logo-accent">City</span>List</h1>
   <div class="open-login-button btn btn-default">Your Lists</div>
   <%= link_to "Sign Up", new_user_path, class: "btn btn-default" %>
 </div>
 
 <div class="modalcontainer hide">
   <div class="login-box">
-  <div class="close-modal-button btn">X</div>
+    <div class="close-modal-button btn">X</div>
     <h3>Login</h3>
     <%= form_for(:session, url: login_path) do |f| %>
       <fieldset>
@@ -25,6 +26,5 @@
       </fieldset>
       <%= f.submit ">", class: "btn btn-default" %>
     <% end %>
-
-  </div>
-</div>
+  </div> <!-- login-box -->
+</div> <!-- modalcontainer -->
