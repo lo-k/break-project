@@ -1,24 +1,37 @@
-<h1>Create a new <span class="city-name">City</span>List</h1>
+<header>
+  <nav>
+    <h1><span class="your-name"><%= @user.name %></span>'s <span class="city-name">City</span><span class="list-title">Lists</span></h1>
+    <ul>
+      <li><%= link_to dashboard_path do %>ALL <span class="city-name">City</span>Lists <% end %></li>
+      <li>|</li>
+      <li><%= link_to "LOG OUT", logout_path, method: :delete %></li>
+    </ul>
+  </nav>
+  <div class="clear"></div>
+</header>
 
-<% if @city_list.errors.any? %>
-  <div>
-    <%= @city_list.errors.full_messages.first %>
-  </div>
-  <br>
-<% end %>
+<div class="city-list-body">
+  <h2>Create a new CityList</h2>
 
-<div class="row">
-  <div class="col-md-5">
-    <%= form_for @city_list do |f| %>
+  <% if @city_list.errors.any? %>
+    <div>
+      <%= @city_list.errors.full_messages.first %>
+    </div>
+    <br>
+  <% end %>
 
-      <fieldset>
-        <div class="form-group">
-          <%= f.label :city %>
-          <%= f.text_field :city, placeholder: "Enter a City here...", class: "form-control" %>
-        </div>
-      </fieldset>
+  <div class="row">
+    <div class="col-md-5">
+      <%= form_for @city_list do |f| %>
 
-      <%= f.submit "Create", class: "btn btn-default"  %>
-    <% end %>
+        <fieldset>
+          <div class="form-group">
+            <%= f.text_field :city, placeholder: "Enter a City here...", class: "form-control city-list-input" %>
+          </div>
+        </fieldset>
+
+        <%= f.submit "Create", class: "btn btn-default"  %>
+      <% end %>
+    </div>
   </div>
 </div>
