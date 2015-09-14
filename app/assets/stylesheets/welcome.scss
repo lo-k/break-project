@@ -19,7 +19,7 @@ header {
     font-size: 8em;
     color: #444444;
     font-weight: 400;
-    // position: ion: relative;
+    // position: relative;
     margin: 0px auto;
     padding-bottom: 20px;
 
@@ -32,6 +32,7 @@ header {
   height: 196px;
   width: 370px;
   margin: auto;
+  margin-top: 200px;
   bottom: 0;
   right: 0;
   text-align: center;
@@ -49,14 +50,15 @@ header {
   padding: 10px 20px 10px 20px;
   text-decoration: none;
   width: 120px;
-  margin: auto;
+  margin: 20px auto;
+  display: block;
 }
 
 .open-login-button:hover {
   background: #D01A2B;
   text-decoration: none;
+  color: #fff;
 }
-
 
 /******************************************
 /* Login Modal                  
